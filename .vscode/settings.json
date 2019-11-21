@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/ed5fa64e-48d5-42af-b60b-aa5dc8f433b5/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/azure-101-uon-demo",
+    "appService.deploySubpath": ""
+}
