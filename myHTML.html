@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html"> </html>
+<title>
+    W3.CSS
+</title>
+<!--
+<head>
+
+    <style>
+      ul{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          background-color: green;
+
+      }
+        li{
+            float: left;
+        }
+        li a{
+            display: block;
+            color: wheat;
+            text-align: right;
+            padding: 15px;
+            text-decoration: none;
+        }
+        li a:hover{
+            color: black;
+        }
+      .cities{
+          background-color: black;
+          color: white;
+          margin: 20px;
+          padding: 20px;   }
+
+
+    </style>   -->
+
+    <style>
+
+        *{box-sizing: border-box;
+        }
+        body{ font-family: Arial, SansSerif;
+        }
+       header{ background-color: grey;
+           padding: 30px;
+           text-align: center;
+           font-size: 35px;
+           color: white;}
+
+        nav{
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            float: left;
+            width: 70%;
+            height: 300px;
+            background: yellow;
+
+        }
+        section{
+                  display: -webkit-box;
+                  display: flex;
+        }
+
+       nav ul{ list-style-type: none;
+               padding: 0;}
+
+        article {
+            -webkit-flex: 3;
+            -ms-flex: 3;
+            flex: 3;
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px; /* only for demonstration, should be removed */
+        }
+
+        section:after{content: "";
+            display: table;
+            clear: both;}
+        footer{background-color: black;padding: 10px;color: white; text-align: center}
+        /*responsive layout makes the two  columns/boxes stack on top of each  other insread of next to  each other
+        on small screen
+         */
+        @media (max-width: 600px) {
+            nav,article{
+                width: 100%;
+                height: auto; }
+
+            section {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+            }
+     img{
+         max-width: 100%;
+         height: auto;
+         background-size: cover;
+         background-repeat: no-repeat;
+     }
+
+        *{box-sizing: border-box;}
+        .left{background-color: blue;padding: 20px;float: left;width: 20%;}
+        .main{background-color: beige;padding: 20px;float: left;width: 60%;}
+        .right{background-color: green;padding: 20px;float: left;width: 20%;}
+        @media screen and (max-width: 800px){
+            .left,.main,.right{
+                width: 100%;
+            }
+
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="description" content="free web tutorials">
+    <meta name="keywords" content="PaulKariukiMwangi">
+    <meta name="author" content="John">
+    <meta http-equiv="refresh" content="100">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet">
+</hea>
+<body>
+
+<!--
+<div class="w3-container w3-green" style="background-color: green">
+    <h1>W3Schools Demo</h1>
+    <p>Resize this Responsive page!</p>
+</div>
+<div class="w3-row-padding">
+    <div class="w3-third">
+        <h2>London</h2>
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom,
+            with a metropolitan area of over 13 million inhabitants.</p>
+    </div>
+
+<div class="w3-third">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+    <p>The Paris area is one of the largest population centers in Europe,
+        with more than 12 million inhabitants.</p>
+</div>
+
+
+<div class="w3-third">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+    <p>It is the center of the Greater Tokyo Area,
+        and the most populous metropolitan area in the world.</p>
+</div>
+</div>
+-->
+<form action="/action_page.php" autocomplete="on"novalidate>
+<h1>Input type ;password</h1>
+    user name: <br>
+    <input type="text" name="username"><br>
+    password: <br>
+    <input type="password" name="psw"> <br>
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+    <h2>checkbox input type</h2>
+<input type="checkbox" name="vehicle1" value="Bike">i have a bike <br>
+    <input type="checkbox" name="vehicle2" value="car">i have a car <br>
+    <h3>input type ; button</h3>
+    <input type="button" onclick="alert('Hello world!')" value="click me!">
+    <h3>input type ; color</h3>
+    select you favourite color ;
+    <input type="color"name="favcolor">
+    <h5>inpu type ; date</h5>
+    Birthday;
+    <input type="date" name="bday " min="2000-01-01">
+    <h6>input type ; datetime-local</h6>
+    Birthday(date and time);
+    <input type="datetime-local" name="bday">
+    <h5>input type; email</h5>
+    <input type="email" name="email" size="30px">
+    <h5>input type ; file</h5>
+  select a file  <input type="file" name="file"> <br>
+    <input type="submit" name="submit">
+    <h1>input type ; number , defines  numeric input field (you can also  set restricyions) <br> to what numbers are accepted</h1>
+    Quantity(between 1 and 5);
+    <input type="number" name="quantity" min="1" max="5"> <br>
+    <input type="submit" value="submit">
+    <h1>input type ;tel </h1>
+    Enter tel no.;<input type="tel" name="phone" pattern="[0-9]{10}"><br>
+    <input  type="submit" value="submit">
+    <h3>input type ; time(o time zone)</h3>
+    Select time;<input type="time" name="usr_time">
+    <input  type="submit" value="submit">
+    <h2>input type ; url</h2>
+    Enter url; <input type="url" name="homepage">
+    <input  type="submit" value="submit">
+    <h2>input type ; week</h2>
+   selct week:  <input type="week" name="week_year" maxlength="20"> <br>
+    first name;
+    <input type="text" name="firstname" value="john" disabled size="30" > <br>
+
+    <h1>the autocomplete attribute</h1>
+    first name:<input type="text" name="firstname" > <br>
+    Last name :<input type="text" name="lastname" > <br>
+    email : <input type="email" name="email" autocomplete="off" placeholder="your email adress" required> <br>
+    <input type="submit" value="submit">
+    <input type="submit" formtarget="_blank"   value="submit to a knew window" >  <br>
+    <h2>The list attribute </h2>
+    <input list="browsers">
+    <datalist id="browsers">
+        <option value="safari"></option>
+        <option value="opera"></option>
+        <option value="firefox"></option>
+        <option value="internet explorer"></option>
+    </datalist>
+    <input type="submit" value="submit" >
+    <h3>the multiple attribute</h3>
+    select files: <input type="file" name="file" multiple>
+    <h3>required attribute</h3>
+    first name:<input type="text" name="firstname" required> <br>
+    <input type="submit" value="submit">
+
+</form>
+<h1>adding a video element to  HTML5</h1>
+<video height="400" width="600" controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    <source src="movies.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+</video>
+<h2>html5 video methods,properties and event</h2>
+<div style="text-align: center">
+    <button onclick="PlayPause()">play/pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="MakeSmall()">Small</button>
+    <button onclick="MakeNormal()">Normal</button>
+    <br><br>
+    <video id="video1" width="400">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="movies.ogg" type="video/ogg">
+        Your browser does not support  HTMKL5 video.
+    </video>
+</div>
+<script>
+    var MyVideo = document.getElementById("video1");
+    function PlayPause() {
+        if (MyVideo.paused){
+            MyVideo.play();
+        }
+        else
+            MyVideo.pause();
+    }
+    function makeBig() {
+        MyVideo.width = 500;
+    }
+    function MakeSmall() {
+        MyVideo.width = 200;}
+        function MakeNormal() {
+        MyVideo.width  = 300;
+
+        }
+</script>
+<p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+<h4>the html  auido  elemenet</h4>
+<audio controls>
+    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mp3">
+this bowser does n ot  support udio element.
+</audio>
+<h2>html  plug-ins ; the object element </h2>
+<object width="200"  height="150h" data="bookmark.swf"></object>
+<h3>the   html  object element can  also be used to  include  html in html</h3>
+<object width="100%" height="500px" data=""></object>
+<object data="https://www.w3schools.com/html/pic_trulli.jpg"></object>
+<h4>embeded element</h4>
+<embed width="100" height="200" src="bookmarks.swf">
+<aside><h3>playing youtube video in html web page</h3></aside>
+<iframe width="800" height="393" src="https://www.youtube.com/embed/ToY6sjSV8h8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<embed width="420" height="315"
+       src="https://www.youtube.com/v/tgbNymZ7vqY">
+<p>Html  geolocation</p>
+<button onclick="getLocation()"> Click to Get Location</button>
+<p id="demo"></p>
+<script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "Location information is unavailable."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "An unknown error occurred."
+                break;
+        }
+    }
+</script>
+<p>Html Drag and  Drop  example</p>
+
+<style>
+    #div1 {
+        width: 350px;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+    }
+</style>
+<script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="https://www.w3schools.com/html/img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+</body>
